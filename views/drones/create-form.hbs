@@ -1,16 +1,16 @@
 <h2>Create a new drone</h2>
 
 <form method= "POST" action="drones/create-form.hbs">
-  <div class="mb-3">
-    <label class="form-label" >Name</label>
-    <input class="form-control" type="text" name="name">
+  <div class=class="row gx-3 gy-2 align-items-center" aria-label="Basic outlined example">
+    <label class="visually-hidden"  >Name</label>
+    <input class="form-control" type="text" name="name" placeholder="Jane Doe">
     <br>
-    <label class="form-label" >Number of Propellers</label>
-    <input class="form-control" type="number" name="propellers">
+    <label class="visually-hidden"  >Number of Propellers</label>
+    <input class="form-control" type="number" name="propellers" placeholder="Number of Propellers">
     <br>
-    <label class="form-label" >Maximum Speed</label>
-    <input class="form-control" type="number" name="maxSpeed">
+    <label class="visually-hidden"  >Maximum Speed</label>
+    <input class="form-control" type="number" name="maxSpeed" placeholder="Maximum Speed">
     <br>
-    <button class="btn btn-primary" type="submit">SUBMIT</button>
+    <button class="btn btn-outline-primary" type="submit">SUBMIT</button>
   </div>
 </form>

@@ -1,18 +1,39 @@
 <h2>Available Drones</h2>
 
-{{#each drones}}
+{{!-- {{#each drones}}
   
     <p>Name:{{this.name}}</p>
    
     <p>Propellers:{{this.propellers}}</p>
     
     <p>Maximum Speed:{{this.maxSpeed}}</p>
+    <div class="btn-group" role="group" aria-label="Basic outlined example">
      <form action="/drones/{{this._id}}/delete" method="GET">
-  <button class="btn btn-danger">Delete</button>
+  <button class="btn btn-outline-primary">Delete</button>
 </form>
 
     <form action="/drones/{{this._id}}/edit" method="GET">
-  <button type="submit" class="btn btn-warning">Edit</button>
+  <button type="submit" class="btn btn-outline-primary">Edit</button>
 </form>
-  
+  </div>
+{{/each}} --}}
+
+{{#each drones}}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"> <p>Name:{{this.name}}</p></h5>
+    <h5 class="card-title" ><p>Propellers:{{this.propellers}}</p></h5>
+   <h5 class="card-title" ><p>Maximum Speed:{{this.maxSpeed}}</p></h5>
+    
+    <div class="btn-group" role="group" aria-label="Basic outlined example">
+     <form action="/drones/{{this._id}}/delete" method="GET">
+  <button class="btn btn-outline-primary">Delete</button>
+</form>
+
+    <form action="/drones/{{this._id}}/edit" method="GET">
+  <button type="submit" class="btn btn-outline-primary">Edit</button>
+</form>
+  </div>
+  </div>
+</div>
 {{/each}}
